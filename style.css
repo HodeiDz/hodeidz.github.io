@@ -2,7 +2,7 @@ body {
     background: linear-gradient(0deg, rgb(224, 247, 250), rgb(0, 131, 143));
     font-family: "Comic Sans MS", cursive, sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: auto;
     min-height: 100vh;
@@ -18,21 +18,7 @@ body {
     max-width: 75%;
     width: 90%;
     text-align: center;
-    margin: 0 auto;
-}
-
-.button {
-    background-color: #0083FF;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 20px;
-    cursor: pointer;
-    border-radius: 12px;
+    margin: 0 auto;                
 }
 .logo {
     position: fixed;
@@ -45,4 +31,23 @@ body {
     top: 10px;
     right: 10px;
     height: 9%
+}
+.button {
+    background-color: #0083FF;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 20px;
+    cursor: pointer;
+    border-radius: 12px;                
+}
+.home {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    height: 35px;
 }
