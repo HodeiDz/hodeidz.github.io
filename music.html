@@ -126,6 +126,31 @@
             <audio controls src="Media/Banangoa.mp3"></audio>
         </div>
     </div>
+    
+    <script>
+        document.addEventListener("keydown", function(event) {
+            if (event.ctrlKey) {
+                const existingButton = document.getElementById("boton");
+                if (existingButton) {
+                    existingButton.remove();
+                } else {
+                const button = document.createElement("button");
+                button.id = "boton";
+                button.textContent = "If Spotify's iframe doesn't work go click here";
+                button.className = "button";
+                button.style.position = "fixed";
+                button.style.top = "10px";
+                button.style.left = "50%";
+                button.style.transform = "translateX(-50%)";
+                button.onclick = function(){
+                    window.open('https://hodeidz.github.io/music_backup.html');
+                }
+                document.body.appendChild(button);
+            }
+        }
+    });
+    </script>
+
 </body>
     
 </html>
