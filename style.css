@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PlayStory';
-    src: url(Media/PlayStory.otf) format('otf');
+    src: url(Media/PlayStory.otf) format('opentype');
 }
 
 body {
