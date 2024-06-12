@@ -10,6 +10,11 @@ body {
     padding-top: 10px;
 }
 
+@font-face {
+    font-family: 'Play Story';
+    src: url(Media/Play\ Story.otf) format('otf');
+}
+
 .container {
     background: linear-gradient(180deg, rgb(225, 245, 254), rgb(79, 195, 247));
     border-radius: 20px;
