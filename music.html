@@ -126,7 +126,7 @@
             <audio controls src="Media/Banangoa.mp3"></audio>
         </div>
     </div>
-    
+
     <script>
         document.addEventListener("keydown", function(event) {
             if (event.ctrlKey) {
@@ -143,7 +143,7 @@
                 button.style.left = "50%";
                 button.style.transform = "translateX(-50%)";
                 button.onclick = function(){
-                    window.open('https://hodeidz.github.io/music_backup.html');
+                    window.location.href = 'https://hodeidz.github.io/music_backup.html'
                 }
                 document.body.appendChild(button);
             }
