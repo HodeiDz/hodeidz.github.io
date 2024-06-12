@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'PlayStory';
+    src: url(Media/PlayStory.otf) format('otf');
+}
+
 body {
     background: linear-gradient(0deg, rgb(224, 247, 250), rgb(0, 131, 143));
     font-family: "PlayStory", sans-serif;
@@ -8,11 +13,6 @@ body {
     min-height: 100vh;
     margin: 0;
     padding-top: 10px;
-}
-
-@font-face {
-    font-family: 'PlayStory';
-    src: url(Media/PlayStory.otf) format('otf');
 }
 
 .container {
@@ -45,6 +45,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-family: 'PlayStory';
     font-size: 16px;
     margin: 0px 20px;
     cursor: pointer;
