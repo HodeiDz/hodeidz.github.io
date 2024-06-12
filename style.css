@@ -57,3 +57,11 @@ body {
     left: 10px;
     height: 35px;
 }
+
+.back {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 10px;
+    margin: auto;
+}
