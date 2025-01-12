@@ -1,21 +1,23 @@
-2A.1    ->  GANESHEN HORTZA
-2A.2    ->  HARRAPATUAK
-2A.3    ->  LAPURKETA BIKAINA
+5. Zinemaldia -- 2025
+
+2A.1    ->  
+2A.2    ->  
+2A.3    ->  
 
 -----
 
-2B.1    ->  MAITEMINDUAK
-2B.2    ->  PERTSONEN HEDAPENA
-2B.3    ->  USTEKABEA
+2B.1    ->  
+2B.2    ->  
+2B.3    ->  
 
 -----
 
-2D.1    ->  FÁTIMA
-2D.2    ->  ENTRENAMENDUA
-2D.3    ->  ZEIN DA ZURE IZENA?
+2D.1    ->  
+2D.2    ->  
+2D.3    ->  
 
 -----
 
-2E.1    ->  NOR DA HORI?
-2E.2    ->  INGELESEKO AZTERKETAREN LAPURRETA
-2E.3    ->  PIKOTZA ETA PALA
+2E.1    ->  
+2E.2    ->  
+2E.3    ->  

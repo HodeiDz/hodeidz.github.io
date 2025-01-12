@@ -3,7 +3,7 @@
     src: url(Media/PlayStory.otf) format('opentype');
 }
 
-body {
+/*body {
     background: linear-gradient(0deg, rgb(224, 247, 250), rgb(0, 131, 143));
     font-family: "PlayStory", sans-serif;
     display: flex;
@@ -13,8 +13,17 @@ body {
     min-height: 100vh;
     margin: 0;
     padding-top: 10px;
-}
+} */
 
+body {
+    background: linear-gradient(0deg, rgb(224, 247, 250), rgb(0, 131, 143));
+    font-family: "PlayStory", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
 .container {
     background: linear-gradient(180deg, rgb(225, 245, 254), rgb(79, 195, 247));
     border-radius: 20px;
@@ -51,6 +60,27 @@ body {
     cursor: pointer;
     border-radius: 12px;                
 }
+
+.homebutton {
+    background-color: #0083FF;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'PlayStory';
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 12px;   
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.homebutton:hover {
+    background-color: #005FCC;
+    transform: scale(1.2);
+}
 .home {
     position: fixed;
     bottom: 10px;
@@ -62,6 +92,28 @@ body {
     position: fixed;
     bottom: 50%;
     left: 10px;
+    margin: auto;
+    height: 35px;
+}
+
+.previous {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    height: 35px;
+}
+.next {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 35px;
+    transform: rotate(180deg);
+}
+.grip {
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    right: 10px;
     margin: auto;
     height: 35px;
 }
