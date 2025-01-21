@@ -20,7 +20,7 @@ body {
     max-width: 75%;
     width: 90%;
     text-align: center;
-    margin: 0 auto;                
+    margin: 0 auto;         
 }
 
 .containerLogin {
@@ -93,6 +93,39 @@ body {
 
 .button:hover {
     background-color: #005FCC;
+    transform: scale(1.2);
+}
+
+.buttonimage {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1em;
+    margin-left: 5px; 
+}
+
+.cpbutton {
+    background-color: #0083FF;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'PlayStory';
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 12px;   
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cpbutton:hover {
+    background-color: #005FCC;
+    transform: scale(1.2);
+}
+
+.cpbutton img {
+    margin-left: 5px; 
     transform: scale(1.2);
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="Media/Login.svg" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Login</title>
   </head>
   <body>
@@ -26,24 +27,5 @@
     <div class="indexcredits">
       <p>HODEI DIAZ DE MONASTERIOGUREN</p>
     </div>
-
-    <script defer>
-      function login() {
-        const currentPassword = document.getElementById("password").value;
-        const correctPassword = "1234"; 
-
-        if (currentPassword === correctPassword) {
-          window.location.href = "control_panel.html";
-        } else {
-          alert("Pasahitza okerra");
-        }
-      }
-
-      function checkEnter(event) {
-        if (event.key === "Enter") {
-          login();
-        }
-      }
-    </script>
   </body>
 </html>
