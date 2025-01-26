@@ -6,6 +6,7 @@
         <title>ZINEMALDIA 2A.2</title>
         <link rel="icon"   href="../Media/ICO_ZINE_VID.svg">
         <link rel="stylesheet" href="../style.css">
+        <script src="../video.js" defer></script>
     </head>
     <body>
         <img src="../Media/Olabide.svg" alt="Logo" class="logo">
@@ -30,12 +31,12 @@
         <div class="container">
             <h1>Harrapatuak</h1>
             <div>
-            <iframe src="https://drive.google.com/file/d/1uXj7qQShYfi3ir--hIveJ6aKOY6D19Mc/preview" width="640" height="480" allowfullscreen></iframe>
+            <iframe id="video" src="https://drive.google.com/file/d/1uXj7qQShYfi3ir--hIveJ6aKOY6D19Mc/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
             </div>
         </div>
 
         <script>
-            document.onkeydown = function(e) {
+/*             document.onkeydown = function(e) {
                 if (e.keyCode == 39) { // ->
                     window.location.href = '2A.3.html'
                 }
@@ -43,6 +44,16 @@
                     window.location.href = '2A.1.html'
                 } 
             };
+
+            setInterval(function(){
+                if (localStorage.getItem('next') == 'true') {
+                    console.log('next')
+                    window.location.href = '2A.3.html'
+
+                    localStorage.setItem('next', 'false')
+                }
+            }, 1000);  */
+
         </script>
     </body>
 </html>

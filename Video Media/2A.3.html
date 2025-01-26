@@ -6,6 +6,7 @@
         <title>ZINEMALDIA 2A.3</title>
         <link rel="icon"   href="../Media/ICO_ZINE_VID.svg">
         <link rel="stylesheet" href="../style.css">
+        <script src="../video.js" defer></script>
     </head>
     <body>
         <img src="../Media/Olabide.svg" alt="Logo" class="logo">
@@ -44,5 +45,40 @@
                 window.location.href = '2A.2.html'
             } 
         };
+
+        setInterval(function() {
+            if (localStorage.getItem('fullscreen') === 'true') {
+                console.log('Entering fullscreen');
+                localStorage.removeItem('fullscreen');
+                const iframe = document.getElementById('videoFrame');
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.mozRequestFullScreen) { // Firefox
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) { // IE/Edge
+                    iframe.msRequestFullscreen();
+                }
+
+                // Play the video
+                const video = iframe.contentWindow.document.querySelector('video');
+                if (video) {
+                    video.play();
+                }
+            } else if (localStorage.getItem('exitFullscreen') === 'true') {
+                console.log('Exiting fullscreen');
+                localStorage.removeItem('exitFullscreen');
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }, 1000); // Check every 1 second
     </script>
 </html>
