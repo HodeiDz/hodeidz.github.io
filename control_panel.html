@@ -20,21 +20,24 @@
         <h1>Kontrol Panela</h1>
         <div>
             <h2 style="height: 12px; font-size: 17px;">Aurkezpen orriak</h2>
-            <button class="cpbutton" onclick="next()"> Aurrera
-                <img src="Media/arrow.svg" style="transform: rotate(180deg)" class="buttonimage" alt="Aurrera"> 
+
+            <button class="imagebutton" onclick="prev()">Atzera
+                <img src="Media/arrow.svg" alt="Atzera">
             </button>
-            <button class="cpbutton">Atzera
-                <img src="Media/arrow.svg" style="transform: scale(1.4); margin-left: 10px;" class="buttonimage" alt="Atzera">
+
+            <button class="imagebutton" onclick="next()"> Aurrera
+                <img src="Media/arrow.svg" style="transform: rotate(180deg)" alt="Aurrera"> 
             </button>
         </div>
         <div>
-            <h2 style="height: 12px; font-size: 17px;">Aurkezpen orriak</h2>
-            <button class="cpbutton">Pantaila osoa 
-                <img src="Media/fullscreen.svg" style="transform: scale(1.4); margin-left: 10px;" alt="fullscreen" class="buttonimage">
+            <h2 style="height: 12px; font-size: 17px;">Videoak</h2>
+            <button class="imagebutton" onclick="fullscreen()">Pantaila osoa 
+                <img src="Media/fullscreen.svg"  alt="fullscreen">
             </button>     
-            <button class="cpbutton">Pantaila txikitu 
-                <img src="Media/minimize.svg" style="transform: scale(1.4); margin-left: 10px;" alt="fullscreen exit" class="buttonimage">
-            </button>     
+            <button class="imagebutton" onclick="minimize()">Pantaila txikitu 
+                <img src="Media/minimize.svg" alt="fullscreen exit">
+            </button>
         </div>
+        <p>funtzionamendu optimoa izateko mesedez Chrome erabili</p>
 </body>
 </html>

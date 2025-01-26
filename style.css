@@ -96,14 +96,7 @@ body {
     transform: scale(1.2);
 }
 
-.buttonimage {
-    display: inline-block;
-    vertical-align: middle;
-    height: 1em;
-    margin-left: 5px; 
-}
-
-.cpbutton {
+.imagebutton {
     background-color: #0083FF;
     border: none;
     color: white;
@@ -119,14 +112,17 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cpbutton:hover {
+.imagebutton:hover {
     background-color: #005FCC;
     transform: scale(1.2);
 }
 
-.cpbutton img {
-    margin-left: 5px; 
-    transform: scale(1.2);
+.imagebutton img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    margin-left: 10px; 
+    vertical-align: middle;
 }
 
 .home {
