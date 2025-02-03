@@ -38,7 +38,7 @@
           console.log('ERROR: No changes recived, reverting changes');
           localStorage.setItem('next', 'false');
         }
-      }, 2000);
+      }, 2500);
     }
 
 
@@ -53,29 +53,34 @@
           console.log('ERROR: No changes recived, reverting changes');
           localStorage.setItem('prev', 'false');
         }
-      }, 2000);
+      }, 2500);
   }
 
   function fullscreen(){
     localStorage.setItem('fullscreen', 'true');
     console.log("fulscreen on");
 
-/*     setTimeout(() => {
+    setTimeout(() => {
       if(localStorage.getItem('fullscreen') === 'false'){
-        console.log("fulscreen worked succesfully");
-      }
-    }, 2000); */
+        console.log("fullscreen worked succesfully");
+      } else {
+          console.log('ERROR: No changes recived, reverting changes');
+          localStorage.setItem('fullscreen', 'false');
+        }
+      }, 2500);
   }
 
   function minimize(){
     localStorage.setItem('minimize', 'true');
     console.log("minimize on");
 
- /*    setTimeout(() => {
+    setTimeout(() => {
       if(localStorage.getItem('minimize') === 'false'){
         console.log("minimize worked succesfully");
-      }
-    }, 2000); */
-    
+      } else {
+          console.log('ERROR: No changes recived, reverting changes');
+          localStorage.setItem('minimize', 'false');
+        }
+      }, 2500);
 
   } 

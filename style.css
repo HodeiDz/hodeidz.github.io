@@ -132,6 +132,15 @@ body {
     height: 35px;
 }
 
+.homevideo {
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    margin: auto;
+    left: 10px;
+    height: 35px;
+}
+
 .homelogin {
     position: fixed;
     top: 10px;

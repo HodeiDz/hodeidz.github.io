@@ -108,13 +108,19 @@ setInterval(function(){                     //? checkeo de prev(ious)
 
 setInterval(function() { // ! FULSCREEN
     if (localStorage.getItem('fullscreen') === 'true') {
-        console.log('Fullscreen');
-        localStorage.setItem('fullscreen', 'false');
-       
+        console.log('Fullscreen detected');
+        
         const iframe = document.getElementById('video');
         if (iframe.requestFullscreen) {
-            iframe.requestFullscreen();
-        }
+            iframe.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+            });
+        } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            iframe.webkitRequestFullscreen().catch(err => {
+                console.error(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+            });
+        } 
+        localStorage.setItem('fullscreen', 'false');
     }
 }, 1000); // Check every 1 second
 
@@ -122,28 +128,21 @@ setInterval(function() { // ! FULSCREEN
 
 
 
-setInterval(function() { // ! ni idea que hace esto hay que revisarlo
+setInterval(function() { // ! EXIT FULLSCREEN
     if (localStorage.getItem('minimize') === 'true') {
-        console.log('Fullscreen');
+        console.log('EXIT FULSCREEN detected');
         
         const iframe = document.getElementById('video');
-        const rect = iframe.getBoundingClientRect();
-        const x = rect.left + rect.width / 2;
-        const y = rect.top + rect.height / 2;
-        const clickEvent = new MouseEvent('click', {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-            clientX: x,
-            clientY: y
-        });
-        document.elementFromPoint(x, y).dispatchEvent(clickEvent);
-        
+        if (document.exitFullscreen) {
+            document.exitFullscreen().catch(err => {
+                console.error(`Error attempting to exit fullscreen mode: ${err.message} (${err.name})`);
+            });
+        } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+            document.webkitExitFullscreen().catch(err => {
+                console.error(`Error attempting to exit fullscreen mode: ${err.message} (${err.name})`);
+            });
+        } 
         localStorage.setItem('minimize', 'false');
                    
-/*             const iframe = document.getElementById('video');
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } */
         }
         }, 1000);
