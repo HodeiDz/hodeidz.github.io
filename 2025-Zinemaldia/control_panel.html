@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Media/control_panel.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Kontrol Panela | 5. ZINEMALDIA</title>
+</head>
+<body>
+        
+    <img src="Media/Hodei.png" alt="Créditos" class="credits">
+    
+    <a href="index.html">
+        <img src="Media/home.svg" alt="Inico" class="homelogin">
+    </a> 
+
+    <div class="container" style="min-height: 30%;">
+        <h1>Kontrol Panela</h1>
+        <div>
+            <h2 style="height: 12px; font-size: 17px;">Aurkezpen orriak</h2>
+
+            <button class="imagebutton" onclick="prev()">Atzera
+                <img src="Media/arrow.svg" alt="Atzera">
+            </button>
+
+            <button class="imagebutton" onclick="next()"> Aurrera
+                <img src="Media/arrow.svg" style="transform: rotate(180deg)" alt="Aurrera"> 
+            </button>
+        </div>
+        <div>
+            <h2 style="height: 12px; font-size: 17px;">Videoak</h2>
+            <button class="imagebutton" onclick="fullscreen()">Pantaila osoa 
+                <img src="Media/fullscreen.svg"  alt="fullscreen">
+            </button>     
+            <button class="imagebutton" onclick="minimize()">Pantaila txikitu 
+                <img src="Media/minimize.svg" alt="fullscreen exit">
+            </button>
+        </div>
+        <p>funtzionamendu optimoa izateko mesedez Chrome erabili</p>
+</body>
+</html>

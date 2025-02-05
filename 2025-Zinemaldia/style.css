@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'PlayStory';
+    src: url(Media/PlayStory.otf) format('opentype');
+}
+
+body {
+    background: linear-gradient(0deg, rgb(224, 247, 250), rgb(0, 131, 143));
+    font-family: "PlayStory", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    background: linear-gradient(180deg, rgb(225, 245, 254), rgb(79, 195, 247));
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 75%;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;         
+}
+
+.containerLogin {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: #005FCC 2px solid;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;                
+}
+
+.containerLogin input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 6%;
+    pointer-events: none;
+}
+.credits {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 9%;
+    pointer-events: none;
+}
+.staticbutton {
+    background-color: #0083FF;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'PlayStory';
+    font-size: 16px;
+    margin: 0px 20px;
+    cursor: pointer;
+    border-radius: 12px;                
+}
+
+.button {
+    background-color: #0083FF;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'PlayStory';
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 12px;   
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005FCC;
+    transform: scale(1.2);
+}
+
+.imagebutton {
+    background-color: #0083FF;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'PlayStory';
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 12px;   
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.imagebutton:hover {
+    background-color: #005FCC;
+    transform: scale(1.2);
+}
+
+.imagebutton img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    margin-left: 10px; 
+    vertical-align: middle;
+}
+
+.home {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    height: 35px;
+}
+
+.homevideo {
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    margin: auto;
+    left: 10px;
+    height: 35px;
+}
+
+.homelogin {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 35px;
+}
+
+.back {
+    position: fixed;
+    bottom: 50%;
+    left: 10px;
+    margin: auto;
+    height: 35px;
+}
+
+.previous {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    height: 35px;
+}
+.next {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 35px;
+    transform: rotate(180deg);
+}
+.grip {
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    right: 10px;
+    margin: auto;
+    height: 35px;
+}
+
+.indexcredits {
+    position: fixed;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.indexcredits a, .indexcredits p {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.indexcredits a, .indexcredits p:hover {
+    color: #0083FF;
+    transform: scale(1.3);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aurkezpena | 5. ZINEMALDIA</title>
+        <link rel="icon" href="../Media/presentation.svg">
+        <link rel="stylesheet" href="../style.css">
+        <style>
+             
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            position:fixed; 
+            top: 0; 
+            left: 0; 
+            bottom: 0; 
+            right:0;
+            width: 100%;
+            height: 104%;  /* Hay que ver si funciona en todos lo dipositivos*/
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+    </head>
+    <body>
+
+        <iframe id="presentation" allowfullscreen="true"></iframe>
+
+    </body>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const slideid = params.get('slideid');
+            const iframe = document.getElementById('presentation');
+            if (slideid) {
+                iframe.src = `https://docs.google.com/presentation/d/e/2PACX-1vSATi0UBSLqXt5jlOtGvIZyGPijThR4FaRNpTTu1tjPnBPavE4VY7smU3UGhJGcOky8AhdA8yLD0uQd/embed?start=false&loop=false&delayms=3000&slide=${slideid}`;
+            } else {
+                alert("INTERNAL ERROR! Attribute lost, Returning to home page...");
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</html>
