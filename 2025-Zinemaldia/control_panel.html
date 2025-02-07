@@ -8,18 +8,24 @@
     <script src="script.js" defer></script>
     <title>Kontrol Panela | 5. ZINEMALDIA</title>
 </head>
+
 <body>
-        
     <img src="Media/Hodei.png" alt="Créditos" class="credits">
     
     <a href="index.html">
         <img src="Media/home.svg" alt="Inico" class="homelogin">
     </a> 
 
-    <div class="container" style="min-height: 30%;">
+    <div class="container">
         <h1>Kontrol Panela</h1>
         <div>
-            <h2 style="height: 12px; font-size: 17px;">Aurkezpen orriak</h2>
+            <h2 style="height: 12px; font-size: 17px;">Pantailan</h2>
+            <button class="button" style="background-color: gray;" id="ppt-button" onclick="Displayed('ppt')">Aurkezpena</button>
+            <button class="button" style="background-color: gray;" id="vid-button" onclick="Displayed('vid')">Videoak</button>
+        </div>
+
+        <div>
+            <h2 style="height: 12px; font-size: 17px;">Aurkezpen orriak eta videoak</h2>
 
             <button class="imagebutton" onclick="prev()">Atzera
                 <img src="Media/arrow.svg" alt="Atzera">
@@ -28,16 +34,46 @@
             <button class="imagebutton" onclick="next()"> Aurrera
                 <img src="Media/arrow.svg" style="transform: rotate(180deg)" alt="Aurrera"> 
             </button>
+       
+            <h3>Aurkezpen orri zenbakia</h3>
+            <button class="transparentbutton" onclick="reset()">
+                <img src="Media/restart.svg" alt="restart">
+            </button>
+            
+            <span id="slideid-display" style="font-size: 17px; color: #005FCC;"></span>
         </div>
+
         <div>
-            <h2 style="height: 12px; font-size: 17px;">Videoak</h2>
-            <button class="imagebutton" onclick="fullscreen()">Pantaila osoa 
+            <h2 id="vidTitle" style="height: 12px; font-size: 17px;">Videoak</h2>
+            <button id="vidFullscreen" class="imagebutton" onclick="fullscreen()">Pantaila osoa 
                 <img src="Media/fullscreen.svg"  alt="fullscreen">
             </button>     
-            <button class="imagebutton" onclick="minimize()">Pantaila txikitu 
+            <button id="vidMinimize" class="imagebutton" onclick="minimize()">Pantaila txikitu 
                 <img src="Media/minimize.svg" alt="fullscreen exit">
             </button>
         </div>
         <p>funtzionamendu optimoa izateko mesedez Chrome erabili</p>
+    </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!localStorage.getItem('slideid')) {
+            localStorage.setItem('slideid', '1');
+        }
+
+        const slideid = localStorage.getItem('slideid'); // set the current slide id in span
+        document.getElementById('slideid-display').textContent = `Aurkezpen orria: ${slideid}`;
+      
+
+        const selectedOption = localStorage.getItem('selectedOption');
+        localStorage.setItem('Displayed', 'ppt');
+
+        document.getElementById('ppt-button').classList.add('selected');
+        document.getElementById('vidTitle').style.color = 'gray';
+
+        vidFullscreen.classList.add('unabled'); // Pantaila osoa
+        vidMinimize.classList.add('unabled'); // Pantaila txikitu
+        
+    });    
+</script>
 </html>
