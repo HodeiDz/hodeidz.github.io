@@ -20,7 +20,8 @@ body {
     max-width: 75%;
     width: 90%;
     text-align: center;
-    margin: 0 auto;         
+    margin: 0 auto;  
+    min-height: fit-content; /* !important, esto es nuevo ver si modifica algo */       
 }
 
 .containerLogin {
@@ -85,7 +86,7 @@ body {
     display: inline-block;
     font-family: 'PlayStory';
     font-size: 16px;
-    margin: 10px 20px;
+    margin: 10px 10px; /* ! Antes el segundo era 20px*/
     cursor: pointer;
     border-radius: 12px;   
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -93,7 +94,12 @@ body {
 
 .button:hover {
     background-color: #005FCC;
-    transform: scale(1.2);
+    transform: scale(1.15);
+}
+
+.button.selected {
+    background: linear-gradient(0deg, rgb(0, 131, 143), rgb(0, 100, 110));
+    transform: scale(1.15);
 }
 
 .imagebutton {
@@ -106,7 +112,7 @@ body {
     display: inline-block;
     font-family: 'PlayStory';
     font-size: 16px;
-    margin: 10px 20px;
+    margin: 10px 10px; /* ! Antes el segundo era 20px*/
     cursor: pointer;
     border-radius: 12px;   
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -114,7 +120,7 @@ body {
 
 .imagebutton:hover {
     background-color: #005FCC;
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 .imagebutton img {
@@ -123,6 +129,30 @@ body {
     height: 25px;
     margin-left: 10px; 
     vertical-align: middle;
+}
+
+.imagebutton.unabled {
+    background-color: gray;
+    transform: scale(0.9);
+    cursor: not-allowed;
+}
+.transparentbutton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 10px;
+    cursor: pointer;
+    border-radius: 12px;   
+    transition: transform 0.3s ease;
+    transform: translateY(4px);
+}
+
+.transparentbutton:hover {
+    transform: scale(1.3);
 }
 
 .home {
@@ -195,4 +225,8 @@ body {
 .indexcredits a, .indexcredits p:hover {
     color: #0083FF;
     transform: scale(1.3);
+}
+
+.container h2, .container h1 , .container h3 {
+    margin-top: 24px; margin-bottom: 10px;
 }

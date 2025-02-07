@@ -65,7 +65,6 @@ window.onload = function() {                //? VIDEO VARIABLES
     }
 }
 
-
 document.onkeydown = function(e) {          //? Cambio de paginas con flechas
     if (e.keyCode == 39) { // next page
         if (nextPage == null) {
@@ -106,7 +105,7 @@ setInterval(function(){                     //? checkeo de prev(ious)
     }
 }, 1000); 
 
-setInterval(function() { // ! FULSCREEN
+setInterval(function() { // ? FULSCREEN
     if (localStorage.getItem('fullscreen') === 'true') {
         console.log('Fullscreen detected');
         
@@ -124,11 +123,7 @@ setInterval(function() { // ! FULSCREEN
     }
 }, 1000); // Check every 1 second
 
-
-
-
-
-setInterval(function() { // ! EXIT FULLSCREEN
+setInterval(function() { // ? EXIT FULLSCREEN
     if (localStorage.getItem('minimize') === 'true') {
         console.log('EXIT FULSCREEN detected');
         
